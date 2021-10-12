@@ -57,7 +57,7 @@ export const unparkVehicle = async (req, res) => {
   const isThere = await customerModel.findOne(slotNo);
 
   if (!isThere) {
-    return res.status(404).json({ message: "Please enter proper Slot Numbe" });
+    return res.status(404).json({ message: "Please enter proper Slot Number" });
   }
 
   await customerModel.findOneAndDelete(slotNo);
