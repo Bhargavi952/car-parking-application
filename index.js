@@ -2,11 +2,14 @@ import express, { json } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import adminRoute from "./routes/admin.route.js";
 
 const app = express();
 dotenv.config();
 app.use(cors());
 app.use(json());
+
+app.use("/parking", adminRoute);
 
 const PORT = 8000;
 
