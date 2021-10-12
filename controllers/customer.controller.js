@@ -3,7 +3,7 @@ import customerModel from "../models/customer.js";
 
 /*********************************************************************************************************** */
 
-//PARK A CAR
+//Park a Car
 
 export const parkCar = async (req, res) => {
   const vehicleNumber = req.body.vehicleNumber;
@@ -48,7 +48,7 @@ export const parkCar = async (req, res) => {
 
 /*********************************************************************************************************** */
 
-// UNPARK THE CAR
+//  Unpark the Car
 
 export const unparkVehicle = async (req, res) => {
   const slotNo = { slotNumber: req.body.slotNumber };
@@ -84,5 +84,19 @@ export const unparkVehicle = async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({ message: error.message });
+  }
+};
+
+/*********************************************************************************************************** */
+
+// Get the Car/Slot Information
+
+
+export const getVehicleDetails = async (req, res) => {
+  try {
+    const getDetails = await customerModel.find();
+    res.status(200).send({ getDetails });
+  } catch (error) {
+    res.status(400).send({ message: error.message });
   }
 };
