@@ -4,11 +4,14 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import adminRoute from "./routes/admin.route.js";
 import customerRoute from "./routes/customer.route.js";
+import rateLimiter from "./middleware/rateLimit.js";
 
 const app = express();
 dotenv.config();
 app.use(cors());
 app.use(json());
+
+app.use(rateLimiter)
 
 app.use("/parking", adminRoute);
 app.use("/parking", customerRoute);
