@@ -1,8 +1,10 @@
 import express from "express";
 const router = express.Router();
 
-import { parkCar } from "../controllers/customer.controller.js";
+import { parkCar ,unparkVehicle } from "../controllers/customer.controller.js";
 
 router.post("/book", parkCar);
+router.delete("/unpark", unparkVehicle);
+
 
 export default router;
