@@ -16,7 +16,7 @@ app.use(rateLimiter)
 app.use("/parking", adminRoute);
 app.use("/parking", customerRoute);
 app.get("/",(req,res)=>{
-  res.status(200).json({message:"Welcome to car parking system"})
+  res.status(200).json({message:"Welcome to car parking system"},{Apiendpoint:"https://car-parking-system-backend.herokuapp.com/parking/details"})
 })
 
 const PORT = process.env.PORT || 8000;
