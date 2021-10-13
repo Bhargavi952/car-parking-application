@@ -18,6 +18,12 @@ Start the server
 ```bash
   npm run server
 ```
+
+## Deployed Link:
+
+- https://car-parking-system-backend.herokuapp.com/
+
+
 ## Create a Slot
 
 - http://localhost:8000/parking/create/slots
