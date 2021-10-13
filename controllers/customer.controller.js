@@ -9,7 +9,7 @@ export const parkCar = async (req, res) => {
   const vehicleNumber = req.body.vehicleNumber;
 
   // Checking parking slots are available or not
-  const isAvailable = await parkingModel.find({}).lean().exec();
+  const isAvailable = await parkingModel.find({}).lean().exec();z
 
   // If parking slots are full then return a message as parking slots are full
 

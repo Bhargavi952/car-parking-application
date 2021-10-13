@@ -16,7 +16,7 @@ app.use(rateLimiter)
 app.use("/parking", adminRoute);
 app.use("/parking", customerRoute);
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 
