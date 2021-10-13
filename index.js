@@ -21,8 +21,7 @@ app.get("/",(req,res)=>{
 
 const PORT = process.env.PORT || 8000;
 
-const CONNECTION_URL ="mongodb+srv://bhargavi113:bhargavi113@cluster0.moi7z.mongodb.net/carParkingSystem?retryWrites=true&w=majority"
-//  process.env.CONNECTION_URL;
+const CONNECTION_URL =  process.env.CONNECTION_URL;
 
 mongoose
   .connect(CONNECTION_URL, {
