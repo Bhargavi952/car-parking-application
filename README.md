@@ -25,11 +25,13 @@ Start the server
 ### example
 
 {
+
     "totalSlots": 20,
     "availableSlots": 20
+    
 }
 
-## Access : POST ```bash /parking/create/slots ```
+## Access : POST ``` /parking/create/slots ```
 
 ![2021-10-13-08-09-18](https://user-images.githubusercontent.com/77036158/137058650-cfcabab9-e48c-4c50-995c-ae242504d4c8.png)
 
@@ -40,13 +42,15 @@ Start the server
 
 ### example 
 {
- "vehicleNumber":"KA21-356467" 
+
+    "vehicleNumber": "KA21-356467" 
+   
 }
 
 - If the Parking Slots are full then will get response as : "Parking Slots are full"
 - If Car parking successful then will get success message as : "You've succesfully booked parking slot"
 
-## Access : POST ```bash /parking/book ```
+## Access : POST ``` /parking/book ```
 
 ![2021-10-13-02-57-33](https://user-images.githubusercontent.com/77036158/137059140-489f1bac-d604-498d-b918-cc5a36738469.png)
 
@@ -64,7 +68,7 @@ Start the server
 - If given Slots number is not exit then will get response as : "Please enter proper Slot Number"
 - If Car unparking successful then will get response as : "You've succesfully Unparked the car"
 
-## Access : DELETE ```bash /parking/unpark ```
+## Access : DELETE ``` /parking/unpark ```
 ![2021-10-13-02-57-26](https://user-images.githubusercontent.com/77036158/137058943-5b551a22-c89b-4ace-980f-7844a04a4800.png)
 
 
@@ -76,7 +80,7 @@ Start the server
 - If Car and slot get request is successful then will get success message 
 - If Car and slot get request is unsuccessful then will get error message
 
-## Access : GET ```bash /parking/details ```
+## Access : GET ```/parking/details ```
 
 ![2021-10-13-02-57-44](https://user-images.githubusercontent.com/77036158/137059036-a3f3de62-68fe-4de7-9676-4163c25f2ab6.png)
 
